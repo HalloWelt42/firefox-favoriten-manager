@@ -1,0 +1,85 @@
+# ===================
+# macOS
+# ===================
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+Icon?
+
+# ===================
+# Windows
+# ===================
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# ===================
+# Linux
+# ===================
+*~
+.directory
+
+# ===================
+# IDE & Editoren
+# ===================
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+nbproject/
+
+# ===================
+# Node.js (falls Build-Tools genutzt)
+# ===================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.npm/
+
+# ===================
+# Build & Distribution
+# ===================
+dist/
+build/
+*.zip
+*.crx
+*.xpi
+*.pem
+web-ext-artifacts/
+
+# ===================
+# Environment & Secrets
+# ===================
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+
+# ===================
+# Temporäre Dateien
+# ===================
+*.bak
+*.tmp
+*.temp
+*.orig
+*.log
+*.cache
+
+# ===================
+# Test & Coverage
+# ===================
+coverage/
+.nyc_output/
+test-results/
