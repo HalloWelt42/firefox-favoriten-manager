@@ -1,6 +1,6 @@
 # FavGrid – Datenschutzerklärung / Privacy Policy
 
-*Letzte Aktualisierung / Last updated: 2025-02-14*
+*Letzte Aktualisierung / Last updated: 2026-02-20*
 
 ---
 
@@ -43,6 +43,8 @@ Es werden **keine Daten an Server des Entwicklers** gesendet.
 | `tabs` | Tab-Titel für neue Lesezeichen auslesen |
 | `contextMenus` | Rechtsklick-Menü „Zu FavGrid hinzufügen" |
 | `notifications` | Bestätigungen beim Hinzufügen von Lesezeichen |
+| `alarms` | Optionale automatische Backups |
+| `search` | Web-Suche über die Standard-Suchmaschine des Browsers |
 | `host_permissions` | Favicon-Bilder direkt von Webseiten laden |
 
 ### Drittanbieter-Dienste
@@ -53,11 +55,11 @@ FavGrid verwendet **keine** Analyse-, Werbe- oder Tracking-Dienste. Die einzigen
 
 - **Volle Kontrolle**: Export aller Daten jederzeit als JSON, HTML, CSV oder OPML
 - **Löschung**: Alle Daten über die Einstellungen zurücksetzen oder Erweiterung deinstallieren
-- **Transparenz**: Der vollständige Quellcode ist auf [GitHub](https://github.com/HalloWelt42/chrome-favoriten-manager) einsehbar
+- **Transparenz**: Der vollständige Quellcode ist auf [GitHub](https://github.com/HalloWelt42/firefox-favoriten-manager) einsehbar
 
 ### Kontakt
 
-Bei Fragen zum Datenschutz: [GitHub Issues](https://github.com/HalloWelt42/chrome-favoriten-manager/issues)
+Bei Fragen zum Datenschutz: [GitHub Issues](https://github.com/HalloWelt42/firefox-favoriten-manager/issues)
 
 ---
 
@@ -100,6 +102,8 @@ FavGrid makes the following network requests – **only on user action**:
 | `tabs` | Read tab title for new bookmarks |
 | `contextMenus` | Right-click "Add to FavGrid" menu |
 | `notifications` | Confirmation when adding bookmarks |
+| `alarms` | Optional automatic backups |
+| `search` | Web search via the browser's default search engine |
 | `host_permissions` | Load favicon images directly from websites |
 
 ### Third-party services
@@ -110,8 +114,8 @@ FavGrid uses **no** analytics, advertising, or tracking services. The only exter
 
 - **Full control**: Export all data anytime as JSON, HTML, CSV, or OPML
 - **Deletion**: Reset all data via settings or uninstall the extension
-- **Transparency**: Full source code available on [GitHub](https://github.com/HalloWelt42/chrome-favoriten-manager)
+- **Transparency**: Full source code available on [GitHub](https://github.com/HalloWelt42/firefox-favoriten-manager)
 
 ### Contact
 
-For privacy questions: [GitHub Issues](https://github.com/HalloWelt42/chrome-favoriten-manager/issues)
+For privacy questions: [GitHub Issues](https://github.com/HalloWelt42/firefox-favoriten-manager/issues)

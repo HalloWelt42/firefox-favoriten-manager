@@ -1,20 +1,21 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "__MSG_extName__",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "__MSG_extDescription__",
+
+  "default_locale": "de",
 
   "browser_specific_settings": {
     "gecko": {
       "id": "favgrid@hallowelt42.de",
-      "strict_min_version": "109.0",
+      "strict_min_version": "140.0",
       "data_collection_permissions": {
-        "required": ["none"]
+        "required": ["none"],
+        "optional": []
       }
     }
   },
-
-  "default_locale": "de",
 
   "icons": {
     "16": "assets/icons/icon-16.png",
@@ -23,7 +24,7 @@
     "128": "assets/icons/icon-128.png"
   },
 
-  "action": {
+  "browser_action": {
     "default_popup": "src/popup/popup.html",
     "default_icon": {
       "16": "assets/icons/icon-16.png",
@@ -46,21 +47,13 @@
     "tabs",
     "contextMenus",
     "notifications",
-    "alarms"
+    "alarms",
+    "search"
   ],
 
-  "optional_permissions": [
-    "topSites"
-  ],
-
-  "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self'; img-src 'self' https: data: blob:;"
-  },
+  "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self' https: data: blob:;",
 
   "web_accessible_resources": [
-    {
-      "resources": ["assets/*"],
-      "matches": ["<all_urls>"]
-    }
+    "assets/*"
   ]
 }

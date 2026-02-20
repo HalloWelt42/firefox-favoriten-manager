@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         urlDisplay.textContent = currentUrl.substring(0, 30) + '...';
       }
     } else {
-      urlDisplay.textContent = 'Diese Seite kann nicht hinzugefügt werden';
+      urlDisplay.textContent = t('cannotAddPage');
       addButton.disabled = true;
       addButton.style.opacity = '0.5';
       addButton.style.cursor = 'not-allowed';
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (groups.length === 0) {
       const defaultGroup = {
         id: 'default',
-        name: 'Favoriten',
+        name: chrome.i18n.getMessage('favorites') || 'Favoriten',
         icon: '⭐',
         color: '#7f5af0',
         position: 0,
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Aktuelle Seite hinzufügen
     addButton.addEventListener('click', async () => {
       if (!currentUrl || !currentUrl.startsWith('http')) {
-        showToast('Diese Seite kann nicht hinzugefügt werden', true);
+        showToast(t('cannotAddPage'), true);
         return;
       }
       
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Prüfen ob bereits vorhanden
         const exists = currentFavorites.some(f => f.url === currentUrl);
         if (exists) {
-          showToast('Diese Seite ist bereits in deinen Favoriten!', true);
+          showToast(t('alreadyInFavorites'), true);
           return;
         }
         
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         await chrome.storage.local.set({ favorites: currentFavorites });
         
         console.log('Added favorite:', newFavorite);
-        showToast('Favorit hinzugefügt! ✓');
+        showToast(t('favoriteAdded') + ' ✓');
         
         // Stats aktualisieren
         document.getElementById('total-favorites').textContent = currentFavorites.length;
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         
       } catch (err) {
         console.error('Error adding favorite:', err);
-        showToast('Fehler: ' + err.message, true);
+        showToast(t('errorPrefix') + ': ' + err.message, true);
       }
     });
     
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     
   } catch (err) {
     console.error('Popup initialization error:', err);
-    document.getElementById('current-url').textContent = 'Fehler beim Laden';
+    document.getElementById('current-url').textContent = t('errorLoading');
   }
 });
 
